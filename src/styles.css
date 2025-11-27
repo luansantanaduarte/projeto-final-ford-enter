@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
     --amarelo-principal: #FFCF00;
+    --amarelo-escuro: hsl(49, 100%, 40%);
     --branco-principal: #FDFFFC;
 }
 

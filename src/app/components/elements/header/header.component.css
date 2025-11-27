@@ -5,17 +5,21 @@
     margin: 0;
     padding: 24px 36px;
     background-color: var(--branco-principal);
+    flex: 1;
 }
 
 .header-cabecalho-projeto {
-    font-size: 24px;
+    margin: 0;
 }
+
 
 .header-cabecalho-nav-links {
     display: flex;
     flex-direction: row;
     list-style-type: none;
     gap: 24px;
+    margin: 0;
+    padding: 0;
 }
 
 .header-cabecalho-nav-links a {
@@ -23,10 +27,27 @@
     color: black;
 }
 
-.header-cabecalho-botao {
-    background-color: var(--amarelo-principal);
-    padding: 12px;
-    border-radius: 10px;
-    border: none;
-    cursor: pointer;
+.header-cabecalho-botoes {
+    display: flex;
+    gap: 12px;
 }
+
+#botao-iniciar-sessao {
+    background-color: var(--amarelo-principal);
+    color: black;
+}
+
+#botao-iniciar-sessao:hover {
+    background-color: var(--amarelo-escuro);
+}
+
+#botao-entrar {
+    border-color: var(--amarelo-principal);
+    color: black;
+}
+
+#botao-entrar:hover {
+    background-color: var(--amarelo-principal);
+}
+
+
