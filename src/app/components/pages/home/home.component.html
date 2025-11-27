@@ -1,6 +1,22 @@
 <app-header></app-header>
-<!-- <main class="home-principal">
+<main class="home-principal">
     <section class="home-principal-carrossel">
-        <img class="home-principal-carrossel-imagem" src="assets/img/streetwear_carrossel.jpg" alt="">
+        <div class="home-principal-imagem">
+            <span class="material-symbols-outlined home-principal-carrossel-arrows esquerda" (click)="retrocederCarrossel()">chevron_left</span>
+            
+            <span class="material-symbols-outlined home-principal-carrossel-arrows direita" (click)="avancarCarrossel()">chevron_right</span>
+
+            <img src="{{carrossel[contadorCarrossel].link}}" alt="">
+
+            
+            <div class="home-principal-texto d-flex justify-content-center flex-column align-items-center">
+                <h3>Descubra</h3>
+                <h1>{{carrossel[contadorCarrossel].tipo}}</h1>
+            </div>
+            
+        </div>
     </section>
-</main> -->
+    <section class="home-principal-cta_projeto">
+        <img src="assets/img/borda_nome_esquerda" alt="">
+    </section>
+</main>
