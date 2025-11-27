@@ -2,6 +2,8 @@
 :root {
     --amarelo-principal: #FFCF00;
     --amarelo-escuro: hsl(49, 100%, 40%);
+    --amarelo-background: #FFD933;
+    --verde-destaque: #50723C;
     --branco-principal: #FDFFFC;
 }
 

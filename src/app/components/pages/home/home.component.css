@@ -61,3 +61,30 @@
   right: 0;
   margin-right: 24px;
 }
+
+.home-principal-cta_projeto {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background-color: var(--amarelo-background);
+}
+
+
+.home-principal-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px 214px;
+  gap: 72px;
+}
+
+
+.home-principal-content-text h1 {
+  font-weight: 800;
+}
+
+.home-principal-content-text strong {
+  color: var(--verde-destaque);
+  font-weight: bold;
+}

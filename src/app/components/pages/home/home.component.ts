@@ -45,7 +45,6 @@ export class HomeComponent {
     if (this.contadorCarrossel > this.indiceMaxDoCarrossel) {
       this.contadorCarrossel = 0
     }
-    console.log(this.contadorCarrossel);
   }
 
   retrocederCarrossel(): void {
