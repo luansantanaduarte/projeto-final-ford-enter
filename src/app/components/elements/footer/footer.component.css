@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.rodape {
+  padding: 64px 240px;
+}
+
+.rodape-texto {
+  display: flex;
+  gap: 64px;
+  margin-bottom: 32px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 4px;
+}
+
+
+.sessao-rodape h6 {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.rodape-texto-contato-links {
+  display: flex;
+  gap: 8px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid black;
+  opacity: 1;
+}
+
+.rodape-copyright {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+
+@media (max-width: 886px) {
+  .rodape {
+    padding: 32px 64px;
+  }
+  .rodape-texto {
+    flex-direction: column;
+  }
+}
