@@ -41,7 +41,7 @@
 
 .home-principal-carrossel-texto h1 {
   font-weight: 800;
-  font-size: 10vh;
+  font-size: clamp(3rem, 5vw, 5rem);
   text-align: center;
 }
 
@@ -212,5 +212,16 @@
 
   .home-principal-cta_loja-img {
     width: 100%;
+  }
+  
+  .home-principal-cta_loja-text h2,
+  .home-principal-cta_loja-text p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-principal-cta_loja-img {
+    display: none;
   }
 }
