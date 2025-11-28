@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../elements/header/header.component';
+import { FooterComponent } from "../../elements/footer/footer.component";
 
 @Component({
   selector: 'app-home',
-  imports: [HeaderComponent],
+  imports: [HeaderComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
@@ -33,7 +34,7 @@ export class HomeComponent {
 
   resetarIntervalo(): void {
     clearInterval(this.intervalo);
-    this.iniciarIntervalo()
+    this.iniciarIntervalo();
   }
   
   ngOnInit(): void {
@@ -45,6 +46,11 @@ export class HomeComponent {
     if (this.contadorCarrossel > this.indiceMaxDoCarrossel) {
       this.contadorCarrossel = 0
     }
+  }
+
+  avancarCarrosselManual() {
+    this.resetarIntervalo();
+    this.avancarCarrossel();
   }
 
   retrocederCarrossel(): void {
