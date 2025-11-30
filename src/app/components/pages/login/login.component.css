@@ -1,0 +1,42 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+/* ========================================== */
+/* ======== ESTILIZAÇÃO IMG DO LOGIN ======== */
+/* ========================================== */
+
+.login-principal {
+  width: 100%;
+  padding: 48px 128px;
+  
+}
+
+.login-principal-container {
+  border: 2px solid black;
+  border-radius: 50px;
+  overflow: hidden;
+  display: flex;
+}
+
+.login-principal-img {
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.login-principal-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+}
+
+.login-principal-form {
+  width: 50%;
+  padding: 32px 48px;
+}
+
+.login-principal-form-title {
+  font-weight: bold;
+}
