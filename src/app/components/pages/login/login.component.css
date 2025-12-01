@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 /* ========================================== */
@@ -10,7 +11,6 @@
 .login-principal {
   width: 100%;
   padding: 48px 128px;
-  
 }
 
 .login-principal-container {
@@ -21,22 +21,129 @@
 }
 
 .login-principal-img {
-  width: 50%;
-  height: 100%;
-  overflow: hidden;
+  flex: 20%;
 }
 
 .login-principal-img img {
-  object-fit: cover;
   width: 100%;
-  height: 80vh;
+  height: 500px;
+  object-fit: cover;
 }
 
+/* ========================================== */
+/* ========= ESTILIZAÇÃO FORMULARIO ========= */
+/* ========================================== */
+
 .login-principal-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 64px;
+  gap: 16px;
+}
+
+.login-principal-form-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  width: 370px;
+  margin-bottom: 16px;
+}
+
+.login-principal-form-inputs-usuario,
+.login-principal-form-inputs-senha {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.login-principal-form-inputs button {
   width: 50%;
-  padding: 32px 48px;
+  align-self: center;
+  background-color: var(--amarelo-principal);
+  color: black;
+  padding: 8px 16px;
+}
+
+.login-principal-form-inputs button:hover {
+  background-color: var(--amarelo-escuro);
+}
+
+.login-principal-form-inputs input {
+  width: 100%;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.login-principal-form-inputs-usuario label,
+.login-principal-form-inputs-senha label {
+  position: absolute;
+  left: 12px;
+  top: 8px;
+  color: #777;
+  transition: all 0.3s ease;
+}
+
+.login-principal-form-inputs input:focus + label,
+.login-principal-form-inputs input:not(:placeholder-shown) + label {
+  top: -18px;
+  left: 10px;
+}
+
+.login-principal-form-inputs label {
+  background-color: white;
 }
 
 .login-principal-form-title {
   font-weight: bold;
+  font-size: 8100%0%;
+}
+
+/* lgpd */
+.login-principal-form-lgpd {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.login-principal-form-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-principal-form-termos {
+  display: flex;
+  gap: 8px;
+}
+
+.login-principal-form-termos input {
+  width: 16px;
+}
+
+a {
+  color: var(--azul-principal);
+  text-decoration: none;
+}
+
+@media (max-width: 1000px) {
+  .login-principal-img {
+    display: none;
+  }
+
+  .login-principal {
+    width: 100%;
+    padding: 24px 36px;
+  }
+}
+
+@media (max-width: 540px) {
+  .login-principal-form-inputs {
+    width: 100%;
+  }
 }
