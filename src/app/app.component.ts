@@ -7,7 +7,7 @@ import { SignupComponent } from "./components/pages/signup/signup.component";
 
 @Component({
   selector: 'app-root',
-  imports: [ LoginComponent],
+  imports: [SignupComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
