@@ -60,7 +60,7 @@
   position: relative;
 }
 
-.login-principal-form-inputs button {
+.btn-cliente {
   width: 50%;
   align-self: center;
   background-color: var(--amarelo-principal);
@@ -68,8 +68,20 @@
   padding: 8px 16px;
 }
 
-.login-principal-form-inputs button:hover {
+.btn-revendedor {
+  width: 50%;
+  align-self: center;
+  background-color: var(--azul-principal);
+  color: black;
+  padding: 8px 16px;
+}
+
+.btn-cliente:hover {
   background-color: var(--amarelo-escuro);
+}
+
+.btn-revendedor:hover {
+  background-color: var(--azul-escuro);
 }
 
 .login-principal-form-inputs input {
