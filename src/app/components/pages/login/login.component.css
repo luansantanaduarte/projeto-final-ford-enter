@@ -10,7 +10,7 @@
 
 .login-principal {
   width: 100%;
-  padding: 48px 128px;
+  padding: 48px 256px;
 }
 
 .login-principal-container {
@@ -20,13 +20,14 @@
   display: flex;
 }
 
-.login-principal-img {
-  flex: 20%;
+.login-img {
+  width: 60%;
+  height: 700px;
 }
 
-.login-principal-img img {
+.login-img img {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -34,7 +35,7 @@
 /* ========= ESTILIZAÇÃO FORMULARIO ========= */
 /* ========================================== */
 
-.login-principal-form {
+.login-form {
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -44,7 +45,12 @@
   gap: 16px;
 }
 
-.login-principal-form-inputs {
+.login-form-title {
+  font-weight: bold;
+}
+
+
+.login-form-formulario-container {
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -53,8 +59,7 @@
   margin-bottom: 16px;
 }
 
-.login-principal-form-inputs-usuario,
-.login-principal-form-inputs-senha {
+.login-principal-form-formulario-input {
   display: flex;
   justify-content: center;
   position: relative;
@@ -84,7 +89,7 @@
   background-color: var(--azul-escuro);
 }
 
-.login-principal-form-inputs input {
+.login-principal-form-formulario-input input {
   width: 100%;
   padding: 5px 10px;
   outline: none;
@@ -93,8 +98,7 @@
   border-radius: 10px;
 }
 
-.login-principal-form-inputs-usuario label,
-.login-principal-form-inputs-senha label {
+.login-principal-form-formulario-input label {
   position: absolute;
   left: 12px;
   top: 8px;
@@ -102,39 +106,35 @@
   transition: all 0.3s ease;
 }
 
-.login-principal-form-inputs input:focus + label,
-.login-principal-form-inputs input:not(:placeholder-shown) + label {
+.login-principal-form-formulario-input input:focus + label,
+.login-principal-form-formulario-input input:not(:placeholder-shown) + label {
   top: -18px;
   left: 10px;
-}
-
-.login-principal-form-inputs label {
   background-color: white;
 }
 
-.login-principal-form-title {
-  font-weight: bold;
-  font-size: 8100%0%;
-}
 
-/* lgpd */
+/* ========================================== */
+/* ============ ESTILIZAÇÃO LGPD ============ */
+/* ========================================== */ 
+
 .login-principal-form-lgpd {
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-.login-principal-form-links {
+.login-form-links {
   display: flex;
   flex-direction: column;
 }
 
-.login-principal-form-termos {
+.login-form-termos {
   display: flex;
   gap: 8px;
 }
 
-.login-principal-form-termos input {
+.login-form-termos input {
   width: 16px;
 }
 
@@ -143,8 +143,12 @@ a {
   text-decoration: none;
 }
 
+/* ========================================== */
+/* =========== ESTILIZAÇÃO QUERIES ========== */
+/* ========================================== */ 
+
 @media (max-width: 1000px) {
-  .login-principal-img {
+  .login-img {
     display: none;
   }
 
@@ -155,7 +159,7 @@ a {
 }
 
 @media (max-width: 540px) {
-  .login-principal-form-inputs {
+  .login-principal-form-formulario-input {
     width: 100%;
   }
 }
