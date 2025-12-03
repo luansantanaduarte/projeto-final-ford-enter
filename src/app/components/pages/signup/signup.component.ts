@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from "../../elements/header/header.component";
-import { FooterComponent } from "../../elements/footer/footer.component";
+import { FooterComponent } from '../../elements/footer/footer.component';
+import { HeaderHomeComponent } from "../../elements/header-home/header-home.component";
 
 @Component({
   selector: 'app-signup',
-  imports: [HeaderComponent, FooterComponent],
+  imports: [FooterComponent, HeaderHomeComponent],
   templateUrl: './signup.component.html',
-  styleUrl: './signup.component.css'
+  styleUrl: './signup.component.css',
 })
-export class SignupComponent {
-
-}
+export class SignupComponent {}
