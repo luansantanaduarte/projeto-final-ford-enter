@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.menu {
+    border-right: 1px solid #999898;
+    height: 100%;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.menu-link {
+    display: flex;
+    gap: 8px;
+    padding: 0px 48px;
+    cursor: pointer;
+}
+
+.menu-link h1 {
+    font-size: 1.5rem;
+}
+
+.menu-link span {
+    font-size: 1.5rem;
+    user-select: none;
+}
