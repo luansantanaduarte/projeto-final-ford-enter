@@ -8,11 +8,24 @@
                 <span class="material-symbols-outlined">arrow_forward_ios</span>
             </div>
             <div class="arrow-left">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" (click)="passarEsquerda('tendencias')">
                     arrow_back
                 </span>
             </div>
-            <div class="principal-tendencias-produtos">
+            <div #carrosselTendencias class="principal-exibicao-produtos">
+                <div class="produto principal-tendencias-produto">
+                    <div class="produto-img-container">
+                        <img class="produto-img" src="assets/img/index-produto1.jpg" alt="">
+                    </div>
+                    <div class="principal-tendencias-perfil">
+                        <div>L</div>
+                        <h6>Jdbooty</h6>
+                    </div>
+                    <div class="produto-descricao principal-tendencias-produto-descricao">
+                        <h1 class="produto-titulo">Camisa Oversized</h1>
+                        <p class="produto-preco">R$ 69,99</p>
+                    </div>
+                </div>
                 <div class="produto principal-tendencias-produto">
                     <div class="produto-img-container">
                         <img class="produto-img" src="assets/img/index-produto1.jpg" alt="">
@@ -93,7 +106,7 @@
                 </div>
             </div>
             <div class="arrow-right">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined" (click)="passarDireita('tendencias')">
                     arrow_forward
                 </span>
             </div>
@@ -101,15 +114,15 @@
         <div class="principal-streetwear">
             <div class="produtos-titulo">
                 <h1>Streetwear</h1>
-                <span class="material-symbols-outlined">arrow_forward_ios</span>
+                <span class="material-symbols-outlined" (click)="passarEsquerda('streetwear')">arrow_forward_ios</span>
             </div>
-            <div class="principal-tendencias-produtos">
+            <div #carrosselStreetwear class="principal-exibicao-produtos">
                 <div class="produto principal-tendencias-produto">
                     <div class="produto-img-container">
                         <img class="produto-img" src="assets/img/index-produto1.jpg" alt="">
                     </div>
                     <div class="arrow-left">
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined" (click)="passarEsquerda('streetwear')">
                             arrow_back
                         </span>
                     </div>
@@ -188,7 +201,7 @@
                     </div>
                 </div>
                 <div class="arrow-right">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-outlined" (click)="passarDireita('streetwear')">
                         arrow_forward
                     </span>
                 </div>

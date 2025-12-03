@@ -39,7 +39,7 @@
 }
 
 .produto {
-  width: 280px;
+  width: 300px;
   overflow: hidden;
   border: 1px solid black;
   border-radius: 10px;
@@ -91,25 +91,25 @@
   font-weight: bold;
 }
 
-.principal-tendencias-produtos {
+.principal-exibicao-produtos {
   display: grid;
   grid-auto-flow: column;
   grid-template-columns: 1fr;
   gap: 32px;
   overflow-x: auto;
-  padding: 4px;
+  scroll-behavior: smooth;
 }
 
-.principal-tendencias-produtos::-webkit-scrollbar {
+.principal-exibicao-produtos::-webkit-scrollbar {
   height: 5px;
   width: 2px;
 }
 
-.principal-tendencias-produtos::-webkit-scrollbar-track {
+.principal-exibicao-produtos::-webkit-scrollbar-track {
   background: transparent;
 }
 
-.principal-tendencias-produtos::-webkit-scrollbar-thumb {
+.principal-exibicao-produtos::-webkit-scrollbar-thumb {
   background: transparent;
   border-radius: 20px;
 }
