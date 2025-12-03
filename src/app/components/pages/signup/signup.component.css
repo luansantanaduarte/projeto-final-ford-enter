@@ -4,9 +4,13 @@
   box-sizing: border-box;
 }
 
+.header-signup {
+  padding: 24px 36px;
+}
+
 .signup-principal {
   width: 100%;
-  padding: 48px 256px;
+  padding: 16px 256px;
 }
 
 .signup-principal-container {
@@ -26,7 +30,7 @@
 
 .signup-img {
   width: 50%;
-  height: 700px;
+  height: 600px;
 }
 
 .signup-img img {

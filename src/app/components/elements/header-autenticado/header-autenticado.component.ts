@@ -1,11 +1,12 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-header-autenticado',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './header-autenticado.component.html',
-  styleUrl: './header-autenticado.component.css'
+  styleUrl: './header-autenticado.component.css',
 })
 export class HeaderAutenticadoComponent {
-
+  public showSearchBar: boolean = false;
 }

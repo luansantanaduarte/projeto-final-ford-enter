@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   styleUrl: './header-home.component.css'
 })
 export class HeaderHomeComponent {
-
 }

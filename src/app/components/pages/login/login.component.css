@@ -4,10 +4,13 @@
   box-sizing: border-box;
 }
 
+.header-login {
+  padding: 24px 36px;
+}
 
 .login-principal {
   width: 100%;
-  padding: 48px 256px;
+  padding: 16px 256px;
 }
 
 .login-principal-container {
@@ -23,7 +26,7 @@
 
 .login-img {
   width: 50%;
-  height: 700px;
+  height: 600px;
 }
 
 .login-img img {
@@ -49,7 +52,6 @@
 .login-form-title {
   font-weight: bold;
 }
-
 
 .login-form-formulario-container {
   display: flex;
@@ -114,10 +116,9 @@
   background-color: white;
 }
 
-
 /* ========================================== */
 /* ============ ESTILIZAÇÃO LGPD ============ */
-/* ========================================== */ 
+/* ========================================== */
 
 .login-principal-form-lgpd {
   display: flex;
@@ -146,7 +147,7 @@ a {
 
 /* ========================================== */
 /* =========== ESTILIZAÇÃO QUERIES ========== */
-/* ========================================== */ 
+/* ========================================== */
 
 @media (max-width: 1000px) {
   .login-img {

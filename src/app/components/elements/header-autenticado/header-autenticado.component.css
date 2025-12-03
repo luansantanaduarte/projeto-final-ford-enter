@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 36px;
+}
+
+.header-cabecalho-menu {
+  display: flex;
+  gap: 16px;
+}
+
+.material-symbols-outlined {
+  font-size: 2rem;
+  cursor: pointer;
+}
