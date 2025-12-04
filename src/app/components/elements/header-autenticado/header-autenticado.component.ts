@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './header-autenticado.component.css',
 })
 export class HeaderAutenticadoComponent {
-  public showSearchBar: boolean = false;
+  public mostrarConfigPerfil: boolean = false;
+  
 }

@@ -9,9 +9,11 @@
   align-items: center;
   justify-content: space-between;
   padding: 24px 240px;
+  user-select: none;
 }
 
 .header-cabecalho-menu {
+  cursor: pointer;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -19,11 +21,31 @@
   padding: 4px 8px;
   border-radius: 10px;
   background-color: var(--amarelo-principal);
+  position: relative;
 }
 
 .material-symbols-outlined {
   font-size: 2rem;
-  cursor: pointer;
+}
+
+.config-usuario {
+  position: absolute;
+  background-color: white;
+  border: 1px solid black;
+  right: 0;
+  top: 100%;
+  z-index: 100;
+  padding: 12px 16px;
+  margin-top: 8px;
+  border-radius: 8px;
+}
+
+.botao-sair {
+  padding: 8px 64px;
+}
+
+.config-usuario-lista {
+  list-style: none;
 }
 
 @media (max-width: 800px) {

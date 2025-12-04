@@ -1,10 +1,20 @@
+<header class="header-cabecalho">
+  <div class="header-cabecalho-title">
+    <h1 class="header-cabecalho-projeto fs-4 fs-md-5">Projeto-final</h1>
+  </div>
 
-  <header class="header-cabecalho">
-    <div class="header-cabecalho-title">
-      <h1 class="header-cabecalho-projeto fs-4 fs-md-5">Projeto-final</h1>
+  <div
+    class="header-cabecalho-menu"
+    (click)="mostrarConfigPerfil = !mostrarConfigPerfil"
+  >
+    <p>Olá, <strong>Usuário</strong></p>
+    <span class="material-symbols-outlined"> account_circle </span>
+    <div class="config-usuario" *ngIf="mostrarConfigPerfil">
+      <ul class="config-usuario-lista">
+        <li>
+          <button class="btn btn-outline-danger botao-sair">Sair</button>
+        </li>
+      </ul>
     </div>
-    <div class="header-cabecalho-menu">
-      <p>Olá, <strong>Usuário</strong></p>
-      <span class="material-symbols-outlined"> account_circle </span>
-    </div>
+  </div>
 </header>
