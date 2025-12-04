@@ -121,16 +121,17 @@
                 <span class="material-symbols-outlined" (click)="passarEsquerda('streetwear')">arrow_forward_ios</span>
             </div>
             <div #carrosselStreetwear class="principal-exibicao-produtos">
+                <div class="arrow-left">
+                    <span class="material-symbols-outlined" (click)="passarEsquerda('streetwear')">
+                        arrow_back
+                    </span>
+                </div>
+
                 <div class="produto principal-tendencias-produto">
                     <div class="produto-img-container">
                         <img class="produto-img" src="assets/img/index-produto1.jpg" alt="">
                     </div>
 
-                    <div class="arrow-left">
-                        <span class="material-symbols-outlined" (click)="passarEsquerda('streetwear')">
-                            arrow_back
-                        </span>
-                    </div>
 
                     <div class="perfil">
                         <div>L</div>
@@ -215,3 +216,5 @@
         </div>
     </div>
 </main>
+
+<app-footer></app-footer>

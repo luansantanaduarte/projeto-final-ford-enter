@@ -1,10 +1,11 @@
   import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
   import { HeaderAutenticadoComponent } from '../../elements/header-autenticado/header-autenticado.component';
   import { SidebarNavComponent } from '../../elements/sidebar-nav/sidebar-nav.component';
+import { FooterComponent } from "../../elements/footer/footer.component";
 
   @Component({
     selector: 'app-index',
-    imports: [HeaderAutenticadoComponent, SidebarNavComponent],
+    imports: [HeaderAutenticadoComponent, SidebarNavComponent, FooterComponent],
     templateUrl: './index.component.html',
     styleUrl: './index.component.css',
   })
