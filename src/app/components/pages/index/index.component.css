@@ -65,6 +65,7 @@
   align-items: center;
   gap: 8px;
   padding: 16px 24px;
+  cursor: pointer;
 }
 
 .perfil div {
@@ -86,6 +87,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .produto-descricao {
@@ -99,6 +101,7 @@
 
 .produto-titulo {
   font-size: 1.5rem;
+  width: 150px;
   font-weight: bold;
 }
 
@@ -149,6 +152,7 @@
 
 .produto-preco {
   font-size: 1rem;
+  width: 80px;
 }
 
 
