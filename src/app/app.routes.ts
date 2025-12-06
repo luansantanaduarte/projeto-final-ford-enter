@@ -3,6 +3,7 @@ import { HomeComponent } from './components/pages/home/home.component';
 import { LoginComponent } from './components/pages/login/login.component';
 import { SignupComponent } from './components/pages/signup/signup.component';
 import { IndexComponent } from './components/pages/index/index.component';
+import { TimelineComponent } from './components/pages/timeline/timeline.component';
 
 export const routes: Routes = [
   {
@@ -16,5 +17,8 @@ export const routes: Routes = [
   },
   {
     path: "index", component: IndexComponent
+  },
+  {
+    path: "timeline", component: TimelineComponent
   }
 ];
