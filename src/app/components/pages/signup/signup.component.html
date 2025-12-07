@@ -10,46 +10,63 @@
       <h1 class="signup-form-title">Crie sua conta</h1>
 
       <div class="signup-principal-form-container-formulario">
-        <form action="" class="signup-principal-form-formulario">
+        <!-- Formulário -->
+        <form action="" class="signup-principal-form-formulario" #form="ngForm">
+          <!-- Nome -->
           <div class="signup-form-formulario-container">
             <div class="signup-principal-form-formulario-input form-nome">
-              <input type="text" placeholder="" id="nome" />
+              <input type="text" placeholder="" id="nome" name="nome" [(ngModel)]="nome" required/>
               <label for="nome">Nome</label>
             </div>
 
+            <!-- Sobrenome -->
             <div class="signup-principal-form-formulario-input form-sobrenome">
-              <input type="text" placeholder="" id="sobrenome" />
+              <input type="text" placeholder="" id="sobrenome" name="sobrenome" [(ngModel)]="sobrenome" required/>
               <label for="sobrenome">Sobrenome</label>
             </div>
 
+             <!-- Nome de Usuário -->
+            <div class="signup-principal-form-formulario-input form-sobrenome">
+              <input type="text" placeholder="" id="usuario" name="usuario" [(ngModel)]="usuario" required/>
+
+              <label for="usuario">Usuário</label>
+            </div>
+
+            <!-- Email -->
             <div class="signup-principal-form-formulario-input form-email">
-              <input type="email" placeholder="" id="email" />
+              <input type="email" placeholder="" id="email" name="email" [(ngModel)]="email" required/>
               <label for="email">Email</label>
             </div>
 
+            <!-- Data de Nascimento -->
             <div class="signup-principal-form-formulario-input form-nascimento">
-              <input type="date" placeholder="" id="data" />
-              <label for="data"></label>
+              <input type="date" placeholder="" id="dataDeNascimento" name="dataDeNascimento" [(ngModel)]="dataDeNascimento" required/>
+              <label for="dataDeNascimento"></label>
             </div>
+
+            <!-- Senha -->
             <div class="signup-principal-form-formulario-input form-senha">
-              <input type="text" placeholder="" id="senha" />
+              <input type="text" placeholder="" id="senha" name="senha" [(ngModel)]="senha" [style.border-color]="confirmacaoSenha && confirmacaoSenha !== senha ? 'red' :  'black'" required/>
               <label for="senha">Senha</label>
             </div>
 
+            <!-- Confirmação da Senha -->
             <div
-              class="signup-principal-form-formulario-input form-senha-confirmacao"
-            >
-              <input type="text" placeholder="" id="confirmar-senha" />
+              class="signup-principal-form-formulario-input form-senha-confirmacao">
+              <input type="text" placeholder="" id="confirmar-senha" name="confirmacaoSenha" [(ngModel)]="confirmacaoSenha" [style.border-color]="confirmacaoSenha && confirmacaoSenha !== senha ? 'red' :  'black'" required/>
               <label for="confirmar-senha">Confirme sua senha</label>
+              
+              <p class="mensagem-erro" *ngIf="confirmacaoSenha && confirmacaoSenha !== senha">As senhas não conferem</p>
             </div>
+
           </div>
-          <button class="btn btn-criar-conta">Criar Conta</button>
+          <button class="btn btn-criar-conta" (click)="criarConta()" [disabled]="!termos">Criar Conta</button>
         </form>
 
         <div class="signup-form-links">
           <div class="signup-form-lgpd">
-            <input type="checkbox" name="" id="" />
-            <label for=""
+            <input type="checkbox" name="termos" id="termos-lgpd" [(ngModel)]="termos"/>
+            <label for="termos-lgpd"
               >Li e estou de acordo com os <a href="">Termos de Uso</a>.</label
             >
           </div>

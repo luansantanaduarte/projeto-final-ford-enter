@@ -70,6 +70,7 @@
 
 .signup-principal-form-formulario-input label {
   position: absolute;
+  user-select: none;
   left: 12px;
   top: 8px;
   color: #777;
@@ -91,18 +92,18 @@
   gap: 16px;
 }
 
-.form-senha,
-.form-senha-confirmacao {
-  grid-column: 1/-1;
-}
-
 .btn-criar-conta {
   width: 100%;
+  border: none;
   align-self: center;
   background-color: var(--amarelo-principal);
   color: black;
   padding: 8px 16px;
   margin-bottom: 16px;
+}
+
+.btn-criar-conta:disabled {
+  border: none
 }
 
 .signup-form-lgpd {
@@ -115,6 +116,10 @@
 a {
   text-decoration: none;
   color: var(--azul-principal);
+}
+
+.mensagem-erro {
+  color: red;
 }
 
 @media (max-width: 1180px) {
