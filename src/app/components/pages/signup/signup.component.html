@@ -34,8 +34,9 @@
 
             <!-- Email -->
             <div class="signup-principal-form-formulario-input form-email">
-              <input type="email" placeholder="" id="email" name="email" [(ngModel)]="email" required/>
+              <input type="email" placeholder="" id="email" name="email" [(ngModel)]="email" required #emailCtrl="ngModel" email [style.border-color]="emailCtrl.invalid && emailCtrl.touched ? 'red' :  'black'"/>
               <label for="email">Email</label>
+              <p *ngIf="emailCtrl.invalid && emailCtrl.touched" class="mensagem-erro">Email Inválido</p>
             </div>
 
             <!-- Data de Nascimento -->
