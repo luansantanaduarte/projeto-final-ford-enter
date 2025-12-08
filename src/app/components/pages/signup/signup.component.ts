@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FooterComponent } from '../../elements/footer/footer.component';
-import { HeaderHomeComponent } from "../../elements/header-home/header-home.component";
 import { FormsModule } from '@angular/forms';
+import { LoginService } from '../../../services/login.service';
 import { LocalStorageService } from '../../../services/local-storage.service';
 import { v4 as uuid } from 'uuid';
 import { User } from '../../../models/user';
@@ -23,8 +23,8 @@ export class SignupComponent {
   confirmacaoSenha = "";
   termos: boolean = false;
 
-  constructor(private storage: LocalStorageService) {}
-
+  constructor(private LoginService: LoginService, private LocalStorageService: LocalStorageService) {}
+  
   criarConta() {
     const newUser: User = {
       id: uuid(),
@@ -36,6 +36,7 @@ export class SignupComponent {
       senha: this.senha
     }
     
-    this.storage.salvarUsuario(newUser);
+    this.LoginService.salvarUsuario(newUser)
   }
+
 }
