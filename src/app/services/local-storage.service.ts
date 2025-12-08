@@ -27,15 +27,7 @@ export class LocalStorageService {
     localStorage.clear();
   }
 
-  salvarUsuario(user: User) {
-    this.salvarItem('user', user)
-  }
-
-  lerUsuario(): User | null {
-    return this.lerItem<User|null>('user', null)
-  }
-
-  limparUsuario() {
-    this.removerItem('user')
+  pegarUsuarios(): User[] {
+    return this.lerItem<User[]>('usuarios', []);
   }
 }
