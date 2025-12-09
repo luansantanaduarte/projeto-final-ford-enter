@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 import { LocalStorageService } from './local-storage.service';
+import { LoginResponse } from '../models/login-response';
 
 @Injectable({
   providedIn: 'root'
@@ -13,32 +14,29 @@ export class LoginService {
   }
 
   lerUsuario(): User | null {
-    return this.LocalStorageService.lerItem<User|null>('user', null)
+    return this.LocalStorageService.lerItem<User | null>('user', null)
   }
 
   limparUsuario() {
     this.LocalStorageService.removerItem('user')
   }
 
-  fazerLogin(email: string, senha: string): boolean {
+  fazerLogin(email: string, senha: string): LoginResponse {
     const usuario = this.lerUsuario()
 
     if (!usuario) {
-      return false;
+      return { sucesso: false, mensagem: "Nenhum usuário cadastrado encontrado." };
     }
 
-    const verificacaoCredenciais = usuario.email === email && usuario.senha === senha;
-    if (verificacaoCredenciais) {
-      this.LocalStorageService.salvarItem('usuarioLogado', usuario);
-      console.log('deu certo')
-      return true
+
+    if (usuario.senha !== senha && usuario.email !== email) {
+      return { sucesso: false, mensagem: "Email ou senha incorretos." }
     }
 
-    console.log(verificacaoCredenciais)
-    console.log('deu errado')
-    return false
+    this.LocalStorageService.salvarItem('usuarioLogado', usuario);
+    return { sucesso: true, mensagem: "Login realizado com sucesso!" };
+
   }
-
   lerUsuarioLogado(): User | null {
     const raw = localStorage.getItem('usuarioLogado');
     return raw ? (JSON.parse(raw) as User) : null;

@@ -18,20 +18,13 @@ export class LoginComponent {
     event.preventDefault();
     const email = (document.getElementById('email') as HTMLInputElement).value;
     const senha = (document.getElementById('senha') as HTMLInputElement).value;
-    if (!email) {
-      this.mensagemErro = "Digite um email válido.";
-      return;
-    } else if (!senha) {
-      this.mensagemErro = "Digite uma senha válida.";
-      return;
-    }
 
-    const autenticacao = this.LoginService.fazerLogin(email, senha);
+    const resultado = this.LoginService.fazerLogin(email, senha);
 
-    if (autenticacao) {
+    if (resultado.sucesso) {
       this.router.navigate(['/index']);
     } else {
-      this.mensagemErro = "Usuário ou senha incorretos."
+      this.mensagemErro = resultado.mensagem || "Erro ao fazer login."
     }
   }
   public checagemRevendedor = false;
