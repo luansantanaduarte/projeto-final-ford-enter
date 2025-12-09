@@ -3,6 +3,7 @@
 </header>
 <main class="login-principal">
 
+
   <div class="login-principal-container">
 
     @if (checagemRevendedor) {
@@ -16,27 +17,31 @@
     }
 
     <div class="login-form">
+
+      <div class="alert alert-danger usuario-nao-autenticado" role="alert" *ngIf="mensagemErro">
+        <span class="material-symbols-outlined">
+          warning
+        </span>
+        <h6>{{mensagemErro}}</h6>
+      </div>
+
       <h1 class="login-form-title">Login</h1>
       <div class="login-principal-form-formulario">
         <form action="" class="login-form-formulario-container">
           <div class="login-principal-form-formulario-input login-form-usuario">
-            <input type="text" name="" id="usuario" placeholder="">
-            <label for="usuario">Usuário</label>
+            <input type="text" name="" id="email" placeholder="">
+            <label for="usuario">Email</label>
           </div>
           <div class="login-principal-form-formulario-input login-form-senha">
             <input type="text" name="" id="senha" placeholder="">
             <label for="senha">Senha</label>
           </div>
-          <button class="btn" [ngClass]="checagemRevendedor ? 'btn-revendedor' : 'btn-cliente'">Entrar</button>
+          <button class="btn" [ngClass]="checagemRevendedor ? 'btn-revendedor' : 'btn-cliente'"
+            (click)="login($event)">Entrar</button>
         </form>
 
 
         <div class="login-form-links">
-          <div class="login-form-termos">
-            <input type="checkbox" name="" id="">
-            <label for="">Li e estou de acordo com os <a href="">Termos de Uso</a>.</label>
-          </div>
-
           @if (checagemRevendedor) {
           <div>
             <p>Não tem conta? <a href="">Inscrever-se</a>.</p>

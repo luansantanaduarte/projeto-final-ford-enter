@@ -19,5 +19,29 @@ export class LoginService {
   limparUsuario() {
     this.LocalStorageService.removerItem('user')
   }
+
+  fazerLogin(email: string, senha: string): boolean {
+    const usuario = this.lerUsuario()
+
+    if (!usuario) {
+      return false;
+    }
+
+    const verificacaoCredenciais = usuario.email === email && usuario.senha === senha;
+    if (verificacaoCredenciais) {
+      this.LocalStorageService.salvarItem('usuarioLogado', usuario);
+      console.log('deu certo')
+      return true
+    }
+
+    console.log(verificacaoCredenciais)
+    console.log('deu errado')
+    return false
+  }
+
+  lerUsuarioLogado(): User | null {
+    const raw = localStorage.getItem('usuarioLogado');
+    return raw ? (JSON.parse(raw) as User) : null;
+  }
 }
 

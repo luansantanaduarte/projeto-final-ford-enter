@@ -6,10 +6,11 @@ import { LocalStorageService } from '../../../services/local-storage.service';
 import { v4 as uuid } from 'uuid';
 import { User } from '../../../models/user';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from "@angular/router";
 
 @Component({
   selector: 'app-signup',
-  imports: [FooterComponent, FormsModule, CommonModule],
+  imports: [FooterComponent, FormsModule, CommonModule, RouterLink],
   templateUrl: './signup.component.html',
   styleUrl: './signup.component.css',
 })

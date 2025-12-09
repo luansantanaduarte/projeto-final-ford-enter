@@ -20,6 +20,13 @@
   display: flex;
 }
 
+.usuario-nao-autenticado {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* ========================================== */
 /* ======== ESTILIZAÇÃO IMG DO LOGIN ======== */
 /* ========================================== */
