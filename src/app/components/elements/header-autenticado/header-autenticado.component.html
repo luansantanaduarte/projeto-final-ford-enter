@@ -7,7 +7,7 @@
     class="header-cabecalho-menu"
     (click)="mostrarConfigPerfil = !mostrarConfigPerfil"
   >
-    <p>Olá, <strong>Usuário</strong></p>
+    <p>Olá, <strong>{{usuario}}</strong></p>
     <span class="material-symbols-outlined"> account_circle </span>
     <div class="config-usuario" *ngIf="mostrarConfigPerfil">
       <ul class="config-usuario-lista">
