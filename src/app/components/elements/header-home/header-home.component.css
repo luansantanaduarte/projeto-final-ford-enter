@@ -49,4 +49,8 @@
     background-color: var(--amarelo-principal);
 }
 
-
+@media (max-width: 1160px) {
+    .header-cabecalho {
+        padding: 24px 48px;
+    }
+}
