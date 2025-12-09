@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { FooterComponent } from '../../elements/footer/footer.component';
 import { CommonModule } from '@angular/common';
 import { LoginService } from '../../../services/login.service';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
-  imports: [FooterComponent, CommonModule],
+  imports: [FooterComponent, CommonModule, RouterLink],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
