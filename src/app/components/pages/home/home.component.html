@@ -2,12 +2,14 @@
 <main class="home-principal">
     <section class="home-principal-carrossel">
         <div class="home-principal-carrossel-imagem">
-            <span class="material-symbols-outlined home-principal-carrossel-arrows esquerda" (click)="retrocederCarrossel()">chevron_left</span>
-            
-            <span class="material-symbols-outlined home-principal-carrossel-arrows direita" (click)="avancarCarrosselManual()">chevron_right</span>
+            <span class="material-symbols-outlined home-principal-carrossel-arrows esquerda"
+                (click)="retrocederCarrossel()">chevron_left</span>
+
+            <span class="material-symbols-outlined home-principal-carrossel-arrows direita"
+                (click)="avancarCarrosselManual()">chevron_right</span>
 
             <img src="{{carrossel[contadorCarrossel].link}}" alt="">
-            
+
             <div class="home-principal-carrossel-texto d-flex justify-content-center flex-column align-items-center">
                 <h3>Descubra</h3>
                 <h1>{{carrossel[contadorCarrossel].tipo}}</h1>
@@ -16,28 +18,33 @@
     </section>
 
     <section class="home-principal-hero">
-            <img src="assets/img/borda_nome_direita.png" alt="" class="home-principal-cta-borda borda-nome-esquerda">
+        <img src="assets/img/borda_nome_direita.png" alt="" class="home-principal-cta-borda borda-nome-esquerda">
 
-            <div class="home-principal-hero-content">
-                <div class="home-principal-content-text">
-                    <h1>Conheça o projeto final</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolore molestiae optio. Fugit perferendis hic placeat, ut tenetur sapiente rerum dolore nobis aspernatur nemo dicta! Similique id perspiciatis asperiores ipsam?</p>
-                    <h3>Mostre quem <strong>você é</strong>!</h3>
-                </div>
-                <div class="home-principal-hero-content-img d-none d-md-block">
-                    <img src="assets/img/modelo_com_fundo-amarelo.png" alt="">
-                </div>
+        <div class="home-principal-hero-content">
+            <div class="home-principal-content-text">
+                <h1>Conheça a Ori</h1>
+                <p>Ori, palavra em Iorubá que significa cabeça, que simboliza essência, destino e intuição. A Ori é uma
+                    plataforma que busca unir o empreendedor do campo da moda com as infinitas possibilidades de "ser".
+                    Aqui você encontra diversas tendências que podem ser compartilhadas, permitindo uma interação com
+                    comunidades que traduzem que você é. A Ori conecta criadores, marcas e amantes da moda em um só
+                    lugar.
+                    Aqui, você descobre tendências, compartilha seu estilo e se expressa com autenticidade.</p>
+                <h3>Mostre quem <strong>você é</strong>!</h3>
             </div>
+            <div class="home-principal-hero-content-img d-none d-md-block">
+                <img src="assets/img/modelo_com_fundo-amarelo.png" alt="">
+            </div>
+        </div>
 
-            <img src="assets/img/borda_nome_esquerda.png" alt="" class="home-principal-cta-borda  borda-nome-direita">
+        <img src="assets/img/borda_nome_esquerda.png" alt="" class="home-principal-cta-borda  borda-nome-direita">
     </section>
 
     <section class="home-principal-cta_client">
         <div class="home-principal-cta_client-text">
             <h3>Acesse a comunidade exclusiva</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni culpa porro consectetur accusamus, odio ratione in dolorem maxime voluptate, corrupti quam id officiis? Laborum eius repellat minima aliquid, harum optio! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eaque vitae adipisci alias possimus consequuntur exercitationem sint itaque, iure, perspiciatis, dolorem fugit. Eum hic minima incidunt ipsam, quasi fugit. Corporis.</p>
+            <p>Crie sua conta agora! Compre. Engaje. Tudo na nossa plataforma exclusiva!</p>
         </div>
-        <button class="btn">Crie sua Conta</button>
+        <button class="btn" routerLink="/signup">Crie sua Conta</button>
     </section>
 
     <section class="home-principal-cta_loja">
@@ -47,10 +54,11 @@
         <div class="home-principal-cta_loja-elements">
             <div class="home-principal-cta_loja-text">
                 <h2>Anuncie seus produtos aqui!</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime delectus nobis quae doloribus, repellat ullam officia quidem vitae corrupti consectetur, molestiae, cupiditate labore voluptates quia vero! Nam suscipit pariatur provident.</p>
+                <p>Aqui sua loja tem voz! Anucie seus produtos aqui e gere tráfego orgânico quase instântaneo. Aqui você
+                    pode fazer com que as pessoas possam se mostrar para o mundo.</p>
             </div>
             <div class="home-principal-cta_loja-button">
-                <button class="btn">Crie sua conta revendedor</button>
+                <button class="btn" routerLink="/signup">Crie sua conta revendedor</button>
             </div>
         </div>
     </section>
