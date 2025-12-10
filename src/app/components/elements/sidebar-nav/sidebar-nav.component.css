@@ -6,7 +6,6 @@
 
 .menu {
   height: 100%;
-  border-right: 1px solid black;
 }
 
 .menu-links {
@@ -18,8 +17,9 @@
 .menu-link {
   display: flex;
   gap: 8px;
-  padding: 0px 36px;
+  margin: 0px 16px;
   cursor: pointer;
+  padding: 8px 16px;
 }
 
 .menu-link h1 {
@@ -29,6 +29,12 @@
 .menu-link span {
   font-size: 1.5rem;
   user-select: none;
+}
+
+.rota-ativa {
+  border-radius: 20px;
+  background-color: var(--amarelo-principal);
+  
 }
 
 @media (max-width: 800px) {

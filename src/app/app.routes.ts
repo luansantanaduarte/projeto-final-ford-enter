@@ -9,19 +9,19 @@ import { guestGuard } from './guards/guest.guard';
 
 export const routes: Routes = [
   {
-    path: "", component: HomeComponent,
+    path: "", title: "Página principal",component: HomeComponent,
   },
   {
-    path: "login", component: LoginComponent, canActivate: [guestGuard]
+    path: "login", title: "Login" ,component: LoginComponent, canActivate: [guestGuard]
   },
   {
-    path: "signup", component: SignupComponent, canActivate: [guestGuard]
+    path: "signup", title: "Crie sua conta" ,component: SignupComponent, canActivate: [guestGuard]
   },
   {
-    path: "index", component: IndexComponent, canActivate: [authGuard],
+    path: "index", title: "Ori" ,component: IndexComponent, canActivate: [authGuard],
   },
   {
-    path: "timeline", component: TimelineComponent, canActivate: [authGuard],
+    path: "timeline", title: "Linha do tempo" ,component: TimelineComponent, canActivate: [authGuard],
   },
   {
     path: "**", redirectTo: "",
