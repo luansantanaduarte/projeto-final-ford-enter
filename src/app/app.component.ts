@@ -8,7 +8,7 @@ import { HeaderHomeComponent } from "./components/elements/header-home/header-ho
 
 @Component({
   selector: 'app-root',
-  imports: [HeaderAutenticadoComponent, RouterOutlet],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
