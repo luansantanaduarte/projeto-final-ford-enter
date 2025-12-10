@@ -11,6 +11,11 @@ import { Router, RouterLink } from '@angular/router';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
+  mostrarSenha: boolean = false;
+  alternarSenha() {
+    this.mostrarSenha = !this.mostrarSenha
+  }
+
   mensagemErro = ""
   constructor(private LoginService: LoginService, private router: Router) { }
 

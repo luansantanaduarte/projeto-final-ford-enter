@@ -22,7 +22,7 @@
         <span class="material-symbols-outlined">
           warning
         </span>
-        <h6>{{mensagemErro}}</h6>
+        <p>{{mensagemErro}}</p>
       </div>
 
       <h1 class="login-form-title">Login</h1>
@@ -33,8 +33,11 @@
             <label for="usuario">Email</label>
           </div>
           <div class="login-principal-form-formulario-input login-form-senha">
-            <input type="text" name="" id="senha" placeholder="">
+            <input [type]="mostrarSenha ? 'text' : 'password'" name="" id="senha" placeholder="">
             <label for="senha">Senha</label>
+            <span class="material-symbols-outlined botao-visibilidade" (click)="alternarSenha();">
+              @if (mostrarSenha) {visibility_off} @else {visibility}
+            </span>
           </div>
           <button class="btn" [ngClass]="checagemRevendedor ? 'btn-revendedor' : 'btn-cliente'"
             (click)="login($event)">Entrar</button>
