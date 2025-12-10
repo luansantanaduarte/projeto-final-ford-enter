@@ -14,7 +14,6 @@
 }
 
 .index-principal-container {
-  border-left: 2px solid rgba(184, 184, 184, 0.588);
   overflow: hidden;
   padding: 0px 32px;
   flex: 1;
