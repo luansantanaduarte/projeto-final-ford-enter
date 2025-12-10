@@ -6,10 +6,14 @@ import { IndexComponent } from './components/pages/index/index.component';
 import { TimelineComponent } from './components/pages/timeline/timeline.component';
 import { authGuard } from './guards/auth.guard';
 import { guestGuard } from './guards/guest.guard';
+import { PagProdutoComponent } from './components/pages/pag-produto/pag-produto.component';
 
 export const routes: Routes = [
   {
     path: "", title: "Página principal",component: HomeComponent,
+  },
+  {
+    path: "produto/:id", component: PagProdutoComponent, canActivate:[authGuard],
   },
   {
     path: "login", title: "Login" ,component: LoginComponent, canActivate: [guestGuard]

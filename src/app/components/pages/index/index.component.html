@@ -16,7 +16,7 @@
       </div>
 
       <div #carrosselTendencias class="principal-exibicao-produtos">
-        <div class="produto" *ngFor="let produto of produtosLista1">
+        <div class="produto" *ngFor="let produto of produtosLista1" [routerLink]="['/produto', produto.id]">
           <div class="produto-img-container">
             <img class="produto-img" src="{{ produto.img }}" alt="" />
           </div>

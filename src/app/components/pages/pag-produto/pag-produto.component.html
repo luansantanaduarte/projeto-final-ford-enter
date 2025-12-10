@@ -1,0 +1,20 @@
+<app-header-autenticado></app-header-autenticado>
+<main class="principal-produto">
+  <section class="compra-produto-container">
+      <img src="{{produto.img}}" alt="" class="produto-img">
+
+    <div class="produto-info">
+      <div class="produto-info-nome-preco">
+        <h3 class="produto-titulo">{{produto.nome}}</h3>
+        <p>{{produto.valor}}</p>
+      </div>
+      <p>{{produto.descricao}}</p>
+
+      <div class="produto-botoes">
+        <button class="btn btn-compra">Compre agora!</button>
+        <span class="material-symbols-outlined"> favorite </span>
+      </div>
+    </div>
+  </section>
+</main>
+<app-footer></app-footer>

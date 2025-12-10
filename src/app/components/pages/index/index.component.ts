@@ -3,73 +3,24 @@ import { HeaderAutenticadoComponent } from '../../elements/header-autenticado/he
 import { SidebarNavComponent } from '../../elements/sidebar-nav/sidebar-nav.component';
 import { FooterComponent } from '../../elements/footer/footer.component';
 import { CommonModule, NgFor } from '@angular/common';
+import { RouterLink } from "@angular/router";
+import { ProdutosService } from '../../../services/produtos.service';
 
 @Component({
   selector: 'app-index',
-  imports: [HeaderAutenticadoComponent, SidebarNavComponent, FooterComponent, CommonModule, NgFor],
+  imports: [HeaderAutenticadoComponent, SidebarNavComponent, FooterComponent, CommonModule, NgFor, RouterLink],
   templateUrl: './index.component.html',
   styleUrl: './index.component.css',
 })
 export class IndexComponent {
-  public produtosLista1 = [
-    {
-      id: 1,
-      nome: 'Camisa Oversized',
-      valor: 'R$ 69,99',
-      img: 'assets/img/index-produto1.jpg',
-    },
-    {
-      id: 2,
-      nome: 'Short streetwear',
-      valor: 'R$ 49,99',
-      img: 'assets/img/index-produto2.jpg',
-    },
-    {
-      id: 3,
-      nome: 'Camisa Oversized',
-      valor: 'R$ 69,99',
-      img: 'assets/img/index-produto3.jpg',
-    },
-    {
-      id: 4,
-      nome: 'Óculos',
-      valor: 'R$ 29,99',
-      img: 'assets/img/index-produto4.jpg',
-    },
-    {
-      id: 5,
-      nome: 'Camisa Polo',
-      valor: 'R$ 69,99',
-      img: 'assets/img/index-produto5.jpg',
-    },
-  ];
+  constructor (private produtos: ProdutosService) {}
+  public produtosLista1: any
+  public produtosLista2: any
 
-  public produtosLista2 = [
-    {
-      id: 1,
-      nome: 'Conjunto de Jóias',
-      valor: 'R$ 169,99',
-      img: 'assets/img/index-produto6.jpg',
-    },
-    {
-      id: 2,
-      nome: 'Suéter',
-      valor: 'R$ 69,99',
-      img: 'assets/img/index-produto7.jpg',
-    },
-    {
-      id: 3,
-      nome: 'Camisa Oversized',
-      valor: 'R$ 69,99',
-      img: 'assets/img/index-produto1.jpg',
-    },
-    {
-      id: 4,
-      nome: 'Camisa Polo',
-      valor: 'R$ 69,99',
-      img: 'assets/img/index-produto5.jpg',
-    },
-  ]
+  ngOnInit() {
+    this.produtosLista1 = this.produtos.produtos1
+    this.produtosLista2 = this.produtos.produtos2
+  }
 
   @ViewChild('carrosselTendencias') carrosselTendencias!: ElementRef;
   @ViewChild('carrosselStreetwear') carrosselStreetwear!: ElementRef;
