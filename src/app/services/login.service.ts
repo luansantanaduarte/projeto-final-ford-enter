@@ -41,5 +41,9 @@ export class LoginService {
     const raw = localStorage.getItem('usuarioLogado');
     return raw ? (JSON.parse(raw) as User) : null;
   }
+
+  logout() {
+    localStorage.removeItem('usuarioLogado')
+  }
 }
 

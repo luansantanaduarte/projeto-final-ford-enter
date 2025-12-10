@@ -75,7 +75,7 @@
 
 .usuario-interacao {
   display: flex;
-  gap: 8px;
+  gap: 16px;
   width: 60%;
   justify-content: flex-end;
 }
