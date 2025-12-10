@@ -20,6 +20,20 @@
   display: flex;
 }
 
+.form-senha {
+  position: relative;
+}
+
+.botao-visibilidade {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  cursor: pointer;
+  user-select: none;
+  transform: translateY(-50%);
+  color: #777;
+}
+
 /* ========================================== */
 /* ======== ESTILIZAÇÃO IMG DO LOGIN ======== */
 /* ========================================== */

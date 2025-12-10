@@ -15,6 +15,11 @@ import { RouterLink } from "@angular/router";
   styleUrl: './signup.component.css',
 })
 export class SignupComponent {
+   mostrarSenha: boolean = false;
+  alternarSenha() {
+    this.mostrarSenha = !this.mostrarSenha
+  }
+
   nome = "";
   sobrenome = "";
   usuario = "";
