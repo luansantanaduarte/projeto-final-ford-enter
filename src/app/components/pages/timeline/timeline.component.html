@@ -3,42 +3,36 @@
   <app-sidebar-nav></app-sidebar-nav>
 
   <section class="timeline">
-    <div class="post">
+    <div class="post" *ngFor="let post of posts">
       <div class="post-info">
         <div class="perfil">
-          <div>L</div>
-          <p class="post-usuario">Jdbooty</p>
+          <div>{{post.usuario[0].toLocaleUpperCase()}}</div>
+          <p class="post-usuario">{{post.usuario}}</p>
         </div>
         <div class="data-hora-container">
-          <p class="data-hora">Há 2 minutos</p>
+          <p class="data-hora">{{post.tempoPostado | date:'dd/MM/yyyy HH:mm' }}</p>
         </div>
       </div>
       <div class="post-content">
-        Vi uma jaqueta muito bonita e queria compartilhar com vocês!
+        {{post.conteudo}}
       </div>
       <div class="post-interacoes">
         <span class="material-symbols-outlined"> favorite </span>
         <span class="material-symbols-outlined"> chat_bubble </span>
       </div>
     </div>
-    <div class="post">
-      <div class="post-info">
-        <div class="perfil">
-          <div>L</div>
-          <p class="post-usuario">LuanSantana</p>
-        </div>
-        <div class="data-hora-container">
-          <p class="data-hora">Há 2 minutos</p>
-        </div>
-      </div>
-      <div class="post-content">
-        Afropunk hoje!
-      </div>
-      <div class="post-interacoes">
-        <span class="material-symbols-outlined"> favorite </span>
-        <span class="material-symbols-outlined"> chat_bubble </span>
-      </div>
-    </div>
+  </section>
+  
+  <section class="botao-add">
+    <span class="material-symbols-outlined" (click)="mostrarEditorPost()">add</span>
+  </section>
+  
+  <section class="editor-post" *ngIf="editorPost">
+    <span class="material-symbols-outlined btn-fechar" (click)="esconderEditorPost()">
+      close
+    </span>
+    <input type="text" placeholder="O que você está pensando" class="input-post" [(ngModel)]="conteudoPost">
+    <button class="btn btn-post" (click)="criarPost()">Criar post</button>
   </section>
 </main>
 

@@ -16,6 +16,7 @@
 
 .principal-timeline {
   display: flex;
+  position: relative;
 }
 
 .timeline {
@@ -34,15 +35,18 @@
 
 .post-usuario {
   font-weight: 700;
+  font-size: 0.8rem;
 }
 
 .data-hora {
   color: gray;
+  font-size: 0.8rem;
 }
 
 .post-info {
   display: flex;
-  gap: 8px ;
+  align-items: center;
+  gap: 8px;
 }
 
 .perfil div {
@@ -60,4 +64,78 @@
   display: flex;
   gap: 4px;
   user-select: none;
+}
+
+.botao-add {
+  position: absolute;
+  bottom: 20px;
+  right: 80px;
+  z-index: 1000;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--amarelo-principal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.editor-post {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid black;
+  width: 70vw;
+  height: 70vh;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  z-index: 10000;
+}
+
+.input-post {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  outline: none;
+}
+
+.btn-post {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--amarelo-principal);
+  color: black;
+  padding: 4px 16px;
+}
+
+.btn-post:hover {
+  background-color: var(--amarelo-escuro);
+}
+
+.btn-fechar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .post-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline {
+    margin: 0px 16px;
+  }
+
+  .botao-add {
+    right: 10px;
+  }
 }
