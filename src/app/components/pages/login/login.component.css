@@ -136,6 +136,7 @@
 .login-form-links {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .login-form-termos {
