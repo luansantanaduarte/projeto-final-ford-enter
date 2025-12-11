@@ -159,4 +159,11 @@
   .index-principal-container {
     padding: 0px 16px;
   }
+  .produto {
+  width: 250px;
+  overflow: hidden;
+  border: 1px solid black;
+  border-radius: 10px;
+  user-select: none;
+}
 }
