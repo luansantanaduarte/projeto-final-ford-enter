@@ -224,4 +224,8 @@
   .home-principal-cta_loja-img {
     display: none;
   }
+
+  .home-principal-cta_loja, .home-principal-cta_client {
+    padding: 64px 32px;
+  }
 }

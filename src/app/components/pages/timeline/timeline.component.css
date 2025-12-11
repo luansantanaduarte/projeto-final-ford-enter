@@ -16,7 +16,6 @@
 
 .principal-timeline {
   display: flex;
-  position: relative;
 }
 
 .timeline {
@@ -67,7 +66,7 @@
 }
 
 .botao-add {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 80px;
   z-index: 1000;

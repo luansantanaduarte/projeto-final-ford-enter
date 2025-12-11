@@ -19,6 +19,7 @@
   flex: 1;
   min-width: 0;
 }
+
 /* ========================================== */
 /* =========== ESTILIZAÇÃO DO ROL =========== */
 /* ========================================== */
@@ -159,11 +160,21 @@
   .index-principal-container {
     padding: 0px 16px;
   }
+
   .produto {
-  width: 250px;
-  overflow: hidden;
-  border: 1px solid black;
-  border-radius: 10px;
-  user-select: none;
-}
+    width: 250px;
+    overflow: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+    user-select: none;
+  }
+
+  .arrow-left,
+  .arrow-right {
+    display: none;
+  }
+
+  .principal-exibicao-produtos {
+    padding: 8px 0px;
+  }
 }
