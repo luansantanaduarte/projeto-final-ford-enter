@@ -50,7 +50,7 @@
           </span>
         </div>
 
-        <div class="produto" *ngFor="let produto of produtosLista2">
+        <div class="produto" *ngFor="let produto of produtosLista2" [routerLink]="['/produto', produto.id]">
           <div class="produto-img-container">
             <img class="produto-img" src="{{produto.img}}" alt="" />
           </div>
