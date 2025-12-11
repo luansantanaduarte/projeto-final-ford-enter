@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild, viewChild } from '@angular/core';
 import { FooterComponent } from '../../elements/footer/footer.component';
 import { HeaderHomeComponent } from "../../elements/header-home/header-home.component";
 import { RouterLink } from "@angular/router";

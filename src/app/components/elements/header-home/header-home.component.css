@@ -28,6 +28,7 @@
 .header-cabecalho-nav-links a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
 
 .header-cabecalho-botoes {
