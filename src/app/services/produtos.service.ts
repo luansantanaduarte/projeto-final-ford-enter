@@ -26,7 +26,7 @@ export class ProdutosService {
       nome: 'Camisa Oversized',
       valor: 'R$ 69,99',
       img: 'assets/img/index-produto3.jpg',
-      descicao: 'Camisa oversized branca com estampa grande de tubarão nas costas — icônica, moderna e com forte estética hypebeast. O modelo possui caimento solto, oferecendo conforto e personalidade ao look. Combina perfeitamente com shorts largos, jeans soltos e acessórios de rua.'
+      descricao: 'Camisa oversized branca com estampa grande de tubarão nas costas — icônica, moderna e com forte estética hypebeast. O modelo possui caimento solto, oferecendo conforto e personalidade ao look. Combina perfeitamente com shorts largos, jeans soltos e acessórios de rua.'
     },
     {
       id: 4,
@@ -46,28 +46,28 @@ export class ProdutosService {
 
   public produtos2 = [
     {
-      id: 1,
+      id: 6,
       nome: 'Conjunto de Jóias',
       valor: 'R$ 169,99',
       img: 'assets/img/index-produto6.jpg',
       descricao: 'Conjunto masculino de acessórios estilo street, composto por colares e braceletes que reforçam uma estética sofisticada e moderna. As peças possuem design marcante e combinam com looks pretos, monocromáticos ou minimalistas. Um conjunto ideal para quem gosta de destacar personalidade através de acessórios.'
     },
     {
-      id: 2,
+      id: 7,
       nome: 'Suéter',
       valor: 'R$ 69,99',
       img: 'assets/img/index-produto7.jpg',
       descricao: 'Suéter masculino verde texturizado, com design estiloso e versátil. O tecido aparenta ser macio, trazendo conforto térmico e caimento elegante. O visual combina perfeitamente com jeans, calças de alfaiataria leve ou acessórios urbanos, como pochetes transversais. Excelente para dias mais frios com pegada streetwear premium.'
     },
     {
-      id: 3,
+      id: 1,
       nome: 'Camisa Oversized',
       valor: 'R$ 69,99',
       img: 'assets/img/index-produto1.jpg',
       descricao: 'Camisa oversized com caimento amplo, perfeita para o estilo streetwear. A peça é destacada pela estampa frontal em tipografia marcante, trazendo identidade urbana e atitude. Confeccionada em tecido macio, oferece conforto e um visual estiloso para o dia a dia ou fotos para redes sociais.'
     },
     {
-      id: 4,
+      id: 5,
       nome: 'Camisa Polo',
       valor: 'R$ 69,99',
       img: 'assets/img/index-produto5.jpg',
