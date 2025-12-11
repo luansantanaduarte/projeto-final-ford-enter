@@ -31,6 +31,10 @@
     cursor: pointer;
 }
 
+.header-cabecalho-logo img {
+  width: 80px;
+}
+
 .header-cabecalho-botoes {
     display: flex;
     gap: 12px;

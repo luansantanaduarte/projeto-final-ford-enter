@@ -1,27 +1,28 @@
 <header class="header-cabecalho">
-  <div class="header-cabecalho-title">
-    <h1 class="header-cabecalho-projeto fs-4 fs-md-5">Projeto-final</h1>
+  <div class="header-cabecalho-logo">
+    <a href="" routerLink="/"><img src="assets/icons/ori-logo.svg" alt=""></a>
   </div>
   <div class="usuario-interacao">
     <div class="header-cabecalho-pesquisa">
       <input #inputPesquisa type="text" class="input-pesquisa" placeholder="Pesquisar..." [(ngModel)]="pesquisa"
         (focus)="mudarIcone()" (blur)="onBlur()">
-  
+
       @if (mudancaIcone && pesquisa.length == 0) {
       <span class="material-symbols-outlined icon-pesquisa">
         search
       </span>
       } @else {
-      <span class="material-symbols-outlined icon-pesquisa icone-pesquisa-delete" (click)="limparPesquisa(inputPesquisa)">
+      <span class="material-symbols-outlined icon-pesquisa icone-pesquisa-delete"
+        (click)="limparPesquisa(inputPesquisa)">
         close
       </span>
       }
     </div>
-  
+
     <div class="header-cabecalho-menu" (click)="mostrarConfigPerfil = !mostrarConfigPerfil">
       <p>Olá, <strong>{{usuario}}</strong></p>
       <span class="material-symbols-outlined"> account_circle </span>
-  
+
       <div class="config-usuario" *ngIf="mostrarConfigPerfil">
         <ul class="config-usuario-lista">
           <li>

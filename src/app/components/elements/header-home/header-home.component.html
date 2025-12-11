@@ -1,5 +1,7 @@
 <header class="header-cabecalho">
-    <h1 class="header-cabecalho-projeto fs-4 fs-md-5">Projeto-final</h1>
+    <div class="header-cabecalho-logo">
+        <a href="" routerLink="/"><img src="assets/icons/ori-logo.svg" alt=""></a>
+    </div>
     <nav class="header-cabecalho-nav d-none d-md-block">
         <ul class="header-cabecalho-nav-links">
             <li class="header-cabecalho-nav-links-link"><a (click)="scrollTo('sobreProjeto')">Sobre o projeto</a></li>
@@ -8,7 +10,9 @@
         </ul>
     </nav>
     <div class="header-cabecalho-botoes">
-        <button class="btn btn-primary fs-md-1 d-none d-sm-block border-0 header-cabecalho-botao" id="botao-iniciar-sessao" routerLink="/signup">Criar Conta</button>
-        <button class="btn btn-outline-primary d-none d-sm-block header-cabecalho-botao" id="botao-entrar" routerLink="/login">Entrar</button>
+        <button class="btn btn-primary fs-md-1 d-none d-sm-block border-0 header-cabecalho-botao"
+            id="botao-iniciar-sessao" routerLink="/signup">Criar Conta</button>
+        <button class="btn btn-outline-primary d-none d-sm-block header-cabecalho-botao" id="botao-entrar"
+            routerLink="/login">Entrar</button>
     </div>
 </header>
