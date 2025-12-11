@@ -8,6 +8,11 @@
   padding: 24px 36px;
 }
 
+
+.header-cabecalho-logo img {
+  width: 80px;
+}
+
 .signup-principal {
   width: 100%;
   padding: 16px 256px;
