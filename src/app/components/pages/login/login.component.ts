@@ -32,5 +32,4 @@ export class LoginComponent {
       this.mensagemErro = resultado.mensagem || "Erro ao fazer login."
     }
   }
-  public checagemRevendedor = false;
 }

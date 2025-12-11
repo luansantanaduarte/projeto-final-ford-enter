@@ -83,20 +83,8 @@
   padding: 8px 16px;
 }
 
-.btn-revendedor {
-  width: 50%;
-  align-self: center;
-  background-color: var(--azul-principal);
-  color: black;
-  padding: 8px 16px;
-}
-
 .btn-cliente:hover {
   background-color: var(--amarelo-escuro);
-}
-
-.btn-revendedor:hover {
-  background-color: var(--azul-escuro);
 }
 
 .login-principal-form-formulario-input input {
@@ -106,6 +94,18 @@
   border: none;
   border: 1px solid black;
   border-radius: 10px;
+}
+
+.login-formulario {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+  width: 80%;
+}
+
+.header-cabecalho-logo img {
+  width: 80px;
 }
 
 .login-principal-form-formulario-input label {

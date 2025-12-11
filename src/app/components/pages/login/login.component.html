@@ -1,20 +1,15 @@
 <header class="header-login">
-  <h1 class="header-cabecalho-projeto fs-4 fs-md-5">Projeto-final</h1>
+ <div class="header-cabecalho-logo">
+        <a href="" routerLink="/"><img src="assets/icons/ori-logo.svg" alt=""></a>
+    </div>
 </header>
 <main class="login-principal">
 
 
   <div class="login-principal-container">
-
-    @if (checagemRevendedor) {
     <div class="login-img">
-      <img src="assets/img/negocio_login.jpg" alt="">
+      <img src="assets/img/login_cliente.jpg" alt="">
     </div>
-    } @else if (checagemRevendedor == false) {
-    <div class="login-img">
-      <img src="assets/img/cartao_login_cliente.jpg" alt="">
-    </div>
-    }
 
     <div class="login-form">
 
@@ -24,42 +19,34 @@
         </span>
         <p>{{mensagemErro}}</p>
       </div>
+      <div class="login-formulario">
 
-      <h1 class="login-form-title">Login</h1>
-      <div class="login-principal-form-formulario">
-        <form action="" class="login-form-formulario-container">
-          <div class="login-principal-form-formulario-input login-form-usuario">
-            <input type="text" name="" id="email" placeholder="">
-            <label for="usuario">Email</label>
-          </div>
-          <div class="login-principal-form-formulario-input login-form-senha">
-            <input [type]="mostrarSenha ? 'text' : 'password'" name="" id="senha" placeholder="">
-            <label for="senha">Senha</label>
-            <span class="material-symbols-outlined botao-visibilidade" (click)="alternarSenha();">
-              @if (mostrarSenha) {visibility_off} @else {visibility}
-            </span>
-          </div>
-          <button class="btn" [ngClass]="checagemRevendedor ? 'btn-revendedor' : 'btn-cliente'"
-            (click)="login($event)">Entrar</button>
-        </form>
+        <h1 class="login-form-title">Login</h1>
+        <div class="login-principal-form-formulario">
+          <form action="" class="login-form-formulario-container">
+            <div class="login-principal-form-formulario-input login-form-usuario">
+              <input type="text" name="" id="email" placeholder="">
+              <label for="usuario">Email</label>
+            </div>
+            <div class="login-principal-form-formulario-input login-form-senha">
+              <input [type]="mostrarSenha ? 'text' : 'password'" name="" id="senha" placeholder="">
+              <label for="senha">Senha</label>
+              <span class="material-symbols-outlined botao-visibilidade" (click)="alternarSenha();">
+                @if (mostrarSenha) {visibility_off} @else {visibility}
+              </span>
+            </div>
+            <button class="btn btn-cliente" (click)="login($event)">Entrar</button>
+          </form>
+        </div>
 
 
         <div class="login-form-links">
-          @if (checagemRevendedor) {
-          <div>
-            <p>Não tem conta? <a href="">Inscrever-se</a>.</p>
-            <p>Eu anuncio produtos <a href=""
-                (click)="checagemRevendedor = !checagemRevendedor; $event.preventDefault()">Login com conta de
-                cliente</a>.</p>
-          </div>
-          } @else if (checagemRevendedor == false) {
+
           <div>
             <p>Não tem conta? <a href="" routerLink="/signup">Inscrever-se</a>.</p>
-            <p>Eu anuncio produtos <a href=""
-                (click)="checagemRevendedor = !checagemRevendedor; $event.preventDefault()">Login com conta de
-                anuciante</a>.</p>
+            <p>Eu anuncio produtos <a href="">Login com conta de anuciante</a>.</p>
           </div>
-          }
+
         </div>
       </div>
     </div>
