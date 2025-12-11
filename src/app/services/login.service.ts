@@ -12,18 +12,22 @@ export class LoginService {
   salvarUsuario(user: User) {
     this.LocalStorageService.salvarItem('user', user)
   }
-
+  
   lerUsuario(): User | null {
     return this.LocalStorageService.lerItem<User | null>('user', null)
   }
-
+  
   limparUsuario() {
     this.LocalStorageService.removerItem('user')
   }
-
+  
   fazerLogin(email: string, senha: string): LoginResponse {
-    const usuario = this.lerUsuario()
+    if (!senha || !email) {
+      return { sucesso: false, mensagem: "Preencha todos os campos." }
+    }
 
+    const usuario = this.lerUsuario()
+    
     if (!usuario) {
       return { sucesso: false, mensagem: "Nenhum usuário cadastrado encontrado." };
     }
@@ -32,6 +36,7 @@ export class LoginService {
     if (usuario.senha !== senha && usuario.email !== email) {
       return { sucesso: false, mensagem: "Email ou senha incorretos." }
     }
+
 
     this.LocalStorageService.salvarItem('usuarioLogado', usuario);
     return { sucesso: true, mensagem: "Login realizado com sucesso!" };
